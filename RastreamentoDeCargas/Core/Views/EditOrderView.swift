@@ -166,7 +166,6 @@ struct EditOrderView: View {
         order.trackingCode = trimmedCode.isEmpty ? nil : trimmedCode
         order.orderLink = orderURL
         
-        // Atualiza a transportadora baseada no novo código
         if let code = order.trackingCode {
             if viewModel.normalizeTrackingCode(code) != nil {
                 if code.uppercased().range(of: "^[A-Z]{2}\\d{9}[A-Z]{2}$", options: .regularExpression) != nil {

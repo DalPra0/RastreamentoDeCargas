@@ -14,8 +14,7 @@ final class OrdersViewModel: ObservableObject {
         loadCapturedCodes()
     }
     
-    // MARK: - Gerenciamento de Pedidos
-    
+ 
     func addOrder(
         title: String,
         store: String,
@@ -25,8 +24,7 @@ final class OrdersViewModel: ObservableObject {
     ) {
         var carrier: Carrier = .unknown
         
-        // Detecta a transportadora baseada no código
-        if let code = trackingCode?.trimmingCharacters(in: .whitespacesAndNewlines), !code.isEmpty {
+         if let code = trackingCode?.trimmingCharacters(in: .whitespacesAndNewlines), !code.isEmpty {
             if provider.looksLikeCorreios(code) {
                 carrier = .correios
             } else if code.uppercased().hasPrefix("TBA") {
@@ -69,8 +67,7 @@ final class OrdersViewModel: ObservableObject {
         }
     }
     
-    // MARK: - Atualização de Rastreamento
-    
+ 
     func refreshOrder(_ order: Order, context: ModelContext) async {
         guard let trackingCode = order.trackingCode else {
             print("Pedido sem código de rastreamento: \(order.title)")
@@ -90,8 +87,7 @@ final class OrdersViewModel: ObservableObject {
             
             try context.save()
             
-            // Salva snapshot para o widget
-            saveOrderSnapshot(order)
+             saveOrderSnapshot(order)
             updateCatalog(context: context)
             
             print("Pedido atualizado: \(order.title) - \(result.status.displayName)")
@@ -119,8 +115,7 @@ final class OrdersViewModel: ObservableObject {
         isRefreshing = false
     }
     
-    // MARK: - Códigos Capturados
-    
+ 
     func loadCapturedCodes() {
         capturedCodes = SharedSnapshotStore.loadCapturedCodes()
     }
@@ -131,12 +126,10 @@ final class OrdersViewModel: ObservableObject {
     }
     
     func createOrderFromCapturedCode(_ code: String, context: ModelContext) {
-        // Remove o código da lista
-        capturedCodes.removeAll { $0 == code }
+         capturedCodes.removeAll { $0 == code }
         SharedSnapshotStore.saveCapturedCodes(capturedCodes)
         
-        // Detecta a transportadora
-        var store = "Loja"
+         var store = "Loja"
         if provider.looksLikeCorreios(code) {
             store = "Correios"
         } else if code.uppercased().hasPrefix("TBA") {
@@ -154,8 +147,7 @@ final class OrdersViewModel: ObservableObject {
         )
     }
     
-    // MARK: - Helpers
-    
+ 
     private func saveOrderSnapshot(_ order: Order) {
         let subtitle: String = {
             if let event = order.latestEvent {
@@ -202,8 +194,7 @@ final class OrdersViewModel: ObservableObject {
         }
     }
     
-    // MARK: - Utilitários
-    
+ 
     func extractTrackingCodes(from text: String) -> [String] {
         return provider.extractTrackingCodes(from: text)
     }

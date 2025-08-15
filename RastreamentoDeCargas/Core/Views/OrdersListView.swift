@@ -168,7 +168,7 @@ struct OrdersListView: View {
             showingAddOrder = true
             router.clearPendingAction()
         case .openOrder:
-            break // Já tratado pelo pendingOrderId
+            break
         case .settings:
             router.clearPendingAction()
         }

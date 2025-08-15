@@ -74,7 +74,7 @@ final class Order {
     var orderLink: URL?
     var status: OrderStatus
     var lastUpdated: Date
-    var eventsData: Data // [TrackingEvent] codificado
+    var eventsData: Data
     var createdAt: Date
     
     init(title: String,
