@@ -41,6 +41,7 @@
 		1579EB4A2E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RastreamentoDeCargasWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1579EB4C2E4F758A00B36037 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1579EB4E2E4F758A00B36037 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		1579EB8E2E4FAC1E00B36037 /* RastreamentoDeCargasWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RastreamentoDeCargasWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -51,12 +52,12 @@
 			);
 			target = 1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */;
 		};
-		1579EB8C2E4FA6F400B36037 /* Exceptions for "RastreamentoDeCargas" folder in "RastreamentoDeCargasWidgetExtension" target */ = {
+		1579EB902E4FAC3000B36037 /* Exceptions for "RastreamentoDeCargas" folder in "RastreamentoDeCargas" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				SharedSnapshotStore.swift,
+				Info.plist,
 			);
-			target = 1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */;
+			target = 1579EB372E4F757000B36037 /* RastreamentoDeCargas */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -64,7 +65,7 @@
 		1579EB3A2E4F757000B36037 /* RastreamentoDeCargas */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				1579EB8C2E4FA6F400B36037 /* Exceptions for "RastreamentoDeCargas" folder in "RastreamentoDeCargasWidgetExtension" target */,
+				1579EB902E4FAC3000B36037 /* Exceptions for "RastreamentoDeCargas" folder in "RastreamentoDeCargas" target */,
 			);
 			path = RastreamentoDeCargas;
 			sourceTree = "<group>";
@@ -102,6 +103,7 @@
 		1579EB2F2E4F757000B36037 = {
 			isa = PBXGroup;
 			children = (
+				1579EB8E2E4FAC1E00B36037 /* RastreamentoDeCargasWidgetExtension.entitlements */,
 				1579EB3A2E4F757000B36037 /* RastreamentoDeCargas */,
 				1579EB502E4F758A00B36037 /* RastreamentoDeCargasWidget */,
 				1579EB4B2E4F758A00B36037 /* Frameworks */,
@@ -383,11 +385,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RastreamentoDeCargas/RastreamentoDeCargas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 982D3NRR89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RastreamentoDeCargas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -398,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dalpra.RastreamentoDeCargas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdalpra.RastreamentoDeCargas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -411,11 +415,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RastreamentoDeCargas/RastreamentoDeCargas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 982D3NRR89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RastreamentoDeCargas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,7 +432,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dalpra.RastreamentoDeCargas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdalpra.RastreamentoDeCargas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -439,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RastreamentoDeCargasWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 982D3NRR89;
@@ -452,7 +459,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dalpra.RastreamentoDeCargas.RastreamentoDeCargasWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdalpra.RastreamentoDeCargas.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -466,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RastreamentoDeCargasWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 982D3NRR89;
@@ -479,7 +487,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dalpra.RastreamentoDeCargas.RastreamentoDeCargasWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasdalpra.RastreamentoDeCargas.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -13,8 +13,11 @@ struct RastreamentoDeCargasApp: App {
         // Configuração inicial do background refresh
         setupBackgroundRefresh()
         
-        // Solicitar permissões de notificação
-        requestNotificationPermissions()
+        // Solicitar permissões de notificação (movido para onAppear)
+        // Não podemos acessar @StateObject no init
+        Task {
+            await BackgroundRefresher.requestNotificationPermission()
+        }
     }
     
     var body: some Scene {
@@ -36,6 +39,7 @@ struct RastreamentoDeCargasApp: App {
                 updateProvider()
                 scheduleBackgroundRefresh()
                 loadCapturedCodes()
+                requestNotificationPermissions()
             }
             .onOpenURL { url in
                 router.handleURL(url)
