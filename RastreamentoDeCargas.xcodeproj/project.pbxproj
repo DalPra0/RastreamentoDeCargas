@@ -51,11 +51,21 @@
 			);
 			target = 1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */;
 		};
+		1579EB8C2E4FA6F400B36037 /* Exceptions for "RastreamentoDeCargas" folder in "RastreamentoDeCargasWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SharedSnapshotStore.swift,
+			);
+			target = 1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1579EB3A2E4F757000B36037 /* RastreamentoDeCargas */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1579EB8C2E4FA6F400B36037 /* Exceptions for "RastreamentoDeCargas" folder in "RastreamentoDeCargasWidgetExtension" target */,
+			);
 			path = RastreamentoDeCargas;
 			sourceTree = "<group>";
 		};

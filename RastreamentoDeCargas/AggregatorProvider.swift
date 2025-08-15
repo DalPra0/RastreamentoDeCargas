@@ -67,9 +67,9 @@ struct AggregatorProvider: TrackingProvider {
         }
         
         let decoder = JSONDecoder()
-        let response = try decoder.decode(AfterShipResponse.self, from: data)
+        let afterShipResponse = try decoder.decode(AfterShipResponse.self, from: data)
         
-        let tracking = response.data.tracking
+        let tracking = afterShipResponse.data.tracking
         let status = mapAfterShipStatus(tracking.tag)
         
         let dateFormatter = ISO8601DateFormatter()
@@ -97,51 +97,8 @@ struct AggregatorProvider: TrackingProvider {
     
     // MARK: - 17Track
     private func fetch17Track(code: String) async throws -> TrackingResult {
-        let baseURL = URL(string: "https://api.17track.net/track/v2.2/gettrackinfo")!
-        let headers = [
-            "17token": apiKey,
-            "Content-Type": "application/json"
-        ]
-        
-        let requestBody = [
-            ["number": code]
-        ]
-        
-        let bodyData = try JSONSerialization.data(withJSONObject: requestBody)
-        let (data, response) = try await HTTP.post(baseURL, body: bodyData, headers: headers)
-        
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw HTTPError.invalidResponse
-        }
-        
-        guard httpResponse.statusCode == 200 else {
-            throw HTTPError.serverError(httpResponse.statusCode)
-        }
-        
-        struct T17Response: Decodable {
-            struct DataContainer: Decodable {
-                struct Accepted: Decodable {
-                    struct Track: Decodable {
-                        struct Event: Decodable {
-                            let time_iso: String
-                            let description: String
-                            let location: String?
-                            let stage: String?
-                        }
-                        let number: String
-                        let carrier: Int?
-                        let track_info: [Event]
-                        let latest_status: [String: Any]?
-                    }
-                    let tracks: [Track]
-                }
-                let accepted: [Accepted]
-            }
-            let data: DataContainer
-        }
-        
-        // Para 17Track, a resposta é mais complexa, então vamos usar um approach mais simples
-        // Retorna mock data por enquanto, até ter acesso real à API
+        // Por enquanto, usa o mock provider para 17Track até ter acesso real à API
+        print("17Track não implementado ainda, usando dados simulados")
         return try await MockTrackingProvider().fetchTracking(code: code, carrierHint: nil)
     }
     
