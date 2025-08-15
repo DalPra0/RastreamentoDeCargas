@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1579EB4D2E4F758A00B36037 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1579EB4C2E4F758A00B36037 /* WidgetKit.framework */; };
+		1579EB4F2E4F758A00B36037 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1579EB4E2E4F758A00B36037 /* SwiftUI.framework */; };
+		1579EB5E2E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1579EB4A2E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1579EB5C2E4F758A00B36037 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1579EB302E4F757000B36037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1579EB492E4F758A00B36037;
+			remoteInfo = RastreamentoDeCargasWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1579EB632E4F758A00B36037 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1579EB5E2E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1579EB382E4F757000B36037 /* RastreamentoDeCargas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RastreamentoDeCargas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1579EB4A2E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RastreamentoDeCargasWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1579EB4C2E4F758A00B36037 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1579EB4E2E4F758A00B36037 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1579EB5F2E4F758A00B36037 /* Exceptions for "RastreamentoDeCargasWidget" folder in "RastreamentoDeCargasWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1579EB3A2E4F757000B36037 /* RastreamentoDeCargas */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = RastreamentoDeCargas;
+			sourceTree = "<group>";
+		};
+		1579EB502E4F758A00B36037 /* RastreamentoDeCargasWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1579EB5F2E4F758A00B36037 /* Exceptions for "RastreamentoDeCargasWidget" folder in "RastreamentoDeCargasWidgetExtension" target */,
+			);
+			path = RastreamentoDeCargasWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1579EB472E4F758A00B36037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1579EB4F2E4F758A00B36037 /* SwiftUI.framework in Frameworks */,
+				1579EB4D2E4F758A00B36037 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				1579EB3A2E4F757000B36037 /* RastreamentoDeCargas */,
+				1579EB502E4F758A00B36037 /* RastreamentoDeCargasWidget */,
+				1579EB4B2E4F758A00B36037 /* Frameworks */,
 				1579EB392E4F757000B36037 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				1579EB382E4F757000B36037 /* RastreamentoDeCargas.app */,
+				1579EB4A2E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1579EB4B2E4F758A00B36037 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1579EB4C2E4F758A00B36037 /* WidgetKit.framework */,
+				1579EB4E2E4F758A00B36037 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				1579EB342E4F757000B36037 /* Sources */,
 				1579EB352E4F757000B36037 /* Frameworks */,
 				1579EB362E4F757000B36037 /* Resources */,
+				1579EB632E4F758A00B36037 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1579EB5D2E4F758A00B36037 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1579EB3A2E4F757000B36037 /* RastreamentoDeCargas */,
@@ -69,6 +143,28 @@
 			productName = RastreamentoDeCargas;
 			productReference = 1579EB382E4F757000B36037 /* RastreamentoDeCargas.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1579EB602E4F758A00B36037 /* Build configuration list for PBXNativeTarget "RastreamentoDeCargasWidgetExtension" */;
+			buildPhases = (
+				1579EB462E4F758A00B36037 /* Sources */,
+				1579EB472E4F758A00B36037 /* Frameworks */,
+				1579EB482E4F758A00B36037 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1579EB502E4F758A00B36037 /* RastreamentoDeCargasWidget */,
+			);
+			name = RastreamentoDeCargasWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = RastreamentoDeCargasWidgetExtension;
+			productReference = 1579EB4A2E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					1579EB372E4F757000B36037 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					1579EB492E4F758A00B36037 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				1579EB372E4F757000B36037 /* RastreamentoDeCargas */,
+				1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1579EB362E4F757000B36037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1579EB482E4F758A00B36037 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1579EB462E4F758A00B36037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1579EB5D2E4F758A00B36037 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1579EB492E4F758A00B36037 /* RastreamentoDeCargasWidgetExtension */;
+			targetProxy = 1579EB5C2E4F758A00B36037 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1579EB412E4F757100B36037 /* Debug */ = {
@@ -302,6 +424,60 @@
 			};
 			name = Release;
 		};
+		1579EB612E4F758A00B36037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 982D3NRR89;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RastreamentoDeCargasWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RastreamentoDeCargasWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dalpra.RastreamentoDeCargas.RastreamentoDeCargasWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1579EB622E4F758A00B36037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 982D3NRR89;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RastreamentoDeCargasWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RastreamentoDeCargasWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dalpra.RastreamentoDeCargas.RastreamentoDeCargasWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +495,15 @@
 			buildConfigurations = (
 				1579EB442E4F757100B36037 /* Debug */,
 				1579EB452E4F757100B36037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1579EB602E4F758A00B36037 /* Build configuration list for PBXNativeTarget "RastreamentoDeCargasWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1579EB612E4F758A00B36037 /* Debug */,
+				1579EB622E4F758A00B36037 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
